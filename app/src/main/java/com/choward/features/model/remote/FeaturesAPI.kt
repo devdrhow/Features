@@ -13,7 +13,7 @@ interface FeaturesAPI {
    suspend  fun getAllBusinesses(
         @Header("Authorization") authHeader: String,
         @Query("term") searchTerm: String,
-        @Query("location") location:String): FeaturesResponse
+        @Query("location") location:String): Response<FeaturesResponse>
     @GET(BASE_SEARCH)
     suspend fun getBusinessInfo(): FeaturesBusiness
 //    @GET(LOCATION)
